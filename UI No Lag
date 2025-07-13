@@ -1,9 +1,11 @@
--- Run No-Lag HUB script
-loadstring(game:HttpGet("https://raw.githubusercontent.com/NoLag-id/No-Lag-HUB/refs/heads/main/Loader/Main.lua"))()
-
--- Optional short delay between scripts
-wait(1)
-
--- Run Syphinx Duplication script
+-- Execute No-Lag HUB script first
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Syphinx-Script/Syphinx-Seed/refs/heads/main/Duplication"))()
 
+-- Wait before executing the second script
+wait(1)
+
+-- Execute Syphinx Duplication script second
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NoLag-id/No-Lag-HUB/refs/heads/main/Loader/Main.lua"))()
+
+-- End block (optional, if this is inside a function or conditional)
+-- end
