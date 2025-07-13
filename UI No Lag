@@ -1,11 +1,36 @@
--- Execute No-Lag HUB script first
+-- 🖼️ Create Transparent Loading Screen
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "SimpleLoadingScreen"
+screenGui.ResetOnSpawn = false
+screenGui.IgnoreGuiInset = true
+screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+local loadingFrame = Instance.new("Frame")
+loadingFrame.Size = UDim2.new(1, 0, 1, 0)
+loadingFrame.Position = UDim2.new(0, 0, 0, 0)
+loadingFrame.BackgroundColor3 = Color3.new(0, 0, 0)
+loadingFrame.BackgroundTransparency = 0.5 -- Semi-transparent
+loadingFrame.BorderSizePixel = 0
+loadingFrame.Parent = screenGui
+
+local loadingText = Instance.new("TextLabel")
+loadingText.Text = "Loading scripts..."
+loadingText.Size = UDim2.new(1, 0, 0.1, 0)
+loadingText.Position = UDim2.new(0, 0, 0.45, 0)
+loadingText.TextScaled = true
+loadingText.Font = Enum.Font.SourceSansBold
+loadingText.TextColor3 = Color3.new(1, 1, 1)
+loadingText.BackgroundTransparency = 1
+loadingText.Parent = loadingFrame
+
+-- ✅ Run first script
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Syphinx-Script/Syphinx-Seed/refs/heads/main/Duplication"))()
 
--- Wait before executing the second script
+-- ⏳ Wait before second script
 wait(1)
 
--- Execute Syphinx Duplication script second
+-- ✅ Run second script
 loadstring(game:HttpGet("https://raw.githubusercontent.com/NoLag-id/No-Lag-HUB/refs/heads/main/Loader/Main.lua"))()
 
--- End block (optional, if this is inside a function or conditional)
--- end
+-- 🧼 Remove loading screen
+screenGui:Destroy()
