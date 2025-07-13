@@ -30,7 +30,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Letsbegin2/growagarde
 wait(1)
 
 -- ✅ Run second script
-loadstring(game:HttpGet("https://raw.githubusercontent.com/NoLag-id/No-Lag-HUB/refs/heads/main/Loader/Main.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Letsbegin2/Darkspawner_2.81_Grow-a-Garden_krnl/refs/heads/main/c5d606daf49d51396a986a9bf547962e.txt"))()
 
 -- 🧼 Remove loading screen
 screenGui:Destroy()
